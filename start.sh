@@ -1,24 +1,34 @@
 #!/bin/bash
 
+components_dir="./src/components"
+
 create_components() {
-  components_array=(
-    "GameBoard"
-    "TopicCard"
-    "CodeCard"
-    "ChameleonCard"
-    "Dice"
-    "PlayerList"
-    "GameStatus"
-  )
+  # Check if the directory does not exist
+  if [ ! -d "$components_dir" ]; then
+    mkdir -p "$components_dir"
+    components_array=(
+      "GameBoard"
+      "TopicCard"
+      "CodeCard"
+      "ChameleonCard"
+      "Dice"
+      "PlayerList"
+      "GameStatus"
+    )
 
-  components_dir="./src/components"
+    for name in "${components_array[@]}"; do
+      file="$components_dir/$name.jsx"
+      main_content=$(
+        cat <<EOF
+import GameBoard from './GameBoard';
 
-  mkdir -p $components_dir
-
-  for name in ${components_array[@]}; do
-    file=$components_dir/$name.jsx
-    content=$(
-      cat <<EOF
+function Game() {
+  return <GameBoard />;
+}
+EOF
+      )
+      content=$(
+        cat <<EOF
 export default function $name() {
   return (
     <div className="$name">
@@ -27,19 +37,27 @@ export default function $name() {
   );
 }
 EOF
-    )
-    touch $file
-    echo "$content" >$file
-  done
+      )
+      touch "$file"
+      if [ "$name" == "Game" ]; then
+        echo "$main_content" >"$file"
+      else
+        echo "$content" >"$file"
+      fi
+    done
 
-  # Format the created files with Prettier
-  npx prettier --write "$components_dir/*.jsx"
+    # Format the created files with Prettier
+    npx prettier --write "$components_dir/*.jsx"
 
-  echo "Components created and formatted."
+    echo "Components created and formatted."
+  else
+    echo "Components directory already exists."
+  fi
 }
 
+# Call the function to create components
 create_components
 
 # Start game
-# npm install
-# npm run dev
+npm install
+npm run dev
