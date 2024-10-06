@@ -1,0 +1,44 @@
+.dice {
+  width: 100px;
+  height: 100px;
+}
+.dice--image {
+  /* background-color: red; */
+  /* outline: 5px solid blue; */
+}
+
+:root {
+  offset: 200px;
+}
+
+.dice--image[data-side="1"] {
+  background-position: 0;
+}
+
+.dice--image[data-side="2"] {
+  background-position: -200px;
+}
+
+.dice--image[data-side="3"] {
+  background-position: -400px;
+}
+
+.dice--image[data-side="4"] {
+  background-position: -600px;
+}
+
+.dice--image[data-side="5"] {
+  background-position: -800px;
+}
+
+.dice--image[data-side="6"] {
+  background-position: -1000px;
+}
+
+.dice--image[data-side="7"] {
+  background-position: -1200px;
+}
+
+.dice--image[data-side="8"] {
+  background-position: -1400px;
+}

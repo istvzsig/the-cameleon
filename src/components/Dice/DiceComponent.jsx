@@ -1,38 +1,30 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
+import { useRollingDice } from "./hook";
+import "./dice.css";
 
-function getRandomNumber(max) {
-  return Math.floor(Math.random() * max) + 1;
-}
-
-function useRollingDice(sides) {
-  const [number, setNumber] = useState(getRandomNumber(sides));
-  const [rolling, setRolling] = useState(false);
-
-  function rollDice() {
-    if (sides <= 0) {
-      console.error("Number of sides must be greater than 0");
-      return;
-    }
-    const randomRoll = getRandomNumber(sides);
-    setRolling(true);
-    setTimeout(() => {
-      setNumber(randomRoll);
-      setRolling(false);
-    }, 1000);
-  }
-  return { number, setNumber, rolling, setRolling, rollDice };
-}
-
-export default function Dice({ sides }) {
+export default function Dice({ sides, image }) {
   const { number, rolling, rollDice } = useRollingDice(sides);
+
+  function updateBackgroundImage() {
+    return {
+      width: "200px",
+      height: 200,
+      backgroundImage: `url(${image})`,
+    };
+  }
+
+  console.log({ number });
 
   return (
     // TODO: Change onclick to player turn
-    <div className="Dice" onClick={rollDice}>
-      <h1>{rolling ? "Rolling..." : `You rolled a ${number}`}</h1>
-      <div className={`dice ${rolling ? "rolling" : ""}`}>
-        <div className="face">{number}</div>
+    <div>
+      <h1>{rolling ? "Rolling..." : "Click To Roll"}</h1>
+      <div onClick={rollDice} className={`dice ${rolling ? "rolling" : ""}`}>
+        <div
+          className="dice--image"
+          data-side={number}
+          style={updateBackgroundImage()}
+        ></div>
       </div>
     </div>
   );
@@ -40,4 +32,5 @@ export default function Dice({ sides }) {
 
 Dice.propTypes = {
   sides: PropTypes.number,
+  image: PropTypes.string,
 };
