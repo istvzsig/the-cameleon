@@ -1,0 +1,29 @@
+<svg width="300" height="400" viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="100" width="100" height="100" fill="#D9D9D9"/>
+<rect x="100" y="100" width="100" height="100" fill="#D9D9D9"/>
+<rect x="200" y="100" width="100" height="100" fill="#D9D9D9"/>
+<rect y="100" width="100" height="100" fill="#D9D9D9"/>
+<rect x="100" y="200" width="100" height="100" fill="#D9D9D9"/>
+<rect x="100" y="300" width="100" height="100" fill="#D9D9D9"/>
+<circle cx="150.5" cy="50.5" r="7.5" fill="#050608"/>
+<circle cx="249.5" cy="149.5" r="7.5" transform="rotate(-45 249.5 149.5)" fill="#050608"/>
+<circle cx="269.299" cy="129.701" r="7.5" transform="rotate(-45 269.299 129.701)" fill="#050608"/>
+<circle cx="229.701" cy="169.299" r="7.5" transform="rotate(-45 229.701 169.299)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 240.308 129.701)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 279.906 169.299)" fill="#050608"/>
+<circle cx="150.406" cy="149.5" r="7.5" transform="rotate(-45 150.406 149.5)" fill="#050608"/>
+<circle cx="170.205" cy="129.701" r="7.5" transform="rotate(-45 170.205 129.701)" fill="#050608"/>
+<circle cx="130.607" cy="169.299" r="7.5" transform="rotate(-45 130.607 169.299)" fill="#050608"/>
+<circle cx="170.205" cy="329.607" r="7.5" transform="rotate(-45 170.205 329.607)" fill="#050608"/>
+<circle cx="130.607" cy="369.205" r="7.5" transform="rotate(-45 130.607 369.205)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 141.213 329.607)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 180.811 369.205)" fill="#050608"/>
+<circle cx="170.204" cy="276.607" r="7.5" transform="rotate(45 170.204 276.607)" fill="#050608"/>
+<circle cx="130.607" cy="223.607" r="7.5" transform="rotate(45 130.607 223.607)" fill="#050608"/>
+<circle cx="130.607" cy="249.607" r="7.5" transform="rotate(45 130.607 249.607)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 170.204 234.213)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 170.205 260.213)" fill="#050608"/>
+<circle cx="7.5" cy="7.5" r="7.5" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 130.606 287)" fill="#050608"/>
+<circle cx="71.1102" cy="129.701" r="7.5" transform="rotate(-45 71.1102 129.701)" fill="#050608"/>
+<circle cx="31.5122" cy="169.299" r="7.5" transform="rotate(-45 31.5122 169.299)" fill="#050608"/>
+</svg>
