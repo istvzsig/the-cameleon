@@ -2,7 +2,6 @@ div.dice {
     position: relative;
     width: 100px;
     height: 100px;
-    outline: 2px solid red;
 }
 
 div.dice canvas.face {

@@ -15,10 +15,8 @@ export function useRollingDice({ numOfSides }) {
         }
         const randomRoll = getRandomNumber(numOfSides);
         setRolling(true);
-        setTimeout(() => {
-            setNumber(randomRoll);
-            setRolling(false);
-        }, 420);
+        setNumber(randomRoll);
+        setRolling(false);
     }
 
     return { number, setNumber, rolling, setRolling, rollDice, numOfSides };
