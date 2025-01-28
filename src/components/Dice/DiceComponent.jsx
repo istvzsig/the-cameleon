@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
-import { useRollingDice } from "./hook";
-import './dice.css';
+import { useDice } from "./hook";
 import { DiceFace } from "./DiceFace";
+import './dice.css';
 
+export default function Dice({ numOfSides }) {
+  const imageUrl = numOfSides === 6 ? '/dice-6.png' : '/dice-8.png';
+  const { roll, ref } = useDice({ numOfSides, imageUrl });
 
-export default function Dice({ numOfSides, imageUrl }) {
-  const { number, rollDice } = useRollingDice({ numOfSides: numOfSides });
   return (
     // TODO: Change onclick to player turn
-    <div className="dice" onClick={rollDice}>
-      <DiceFace number={number} imageUrl={'/dice-6.png'} rollDice={rollDice} />
+    <div className="dice" onClick={roll} >
+      <canvas width={100} height={100} ref={ref}></canvas >
     </div>
   );
 }
